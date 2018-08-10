@@ -1,0 +1,33 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  background: #222;
+  font-family: 'Raleway', sans-serif;
+  color: #4286f4;
+}
+
+.showcase center {
+  width: 100%;
+  border-top: 2px solid #4286f4;
+}
+
+.showcase table {
+  width: 70%;
+  margin: 25px;
+}
+
+.showcase iframe {
+  border: none;
+}
+
+.showcase td {
+  background: #fff;
+  text-align: center;
+  font-weight: bolder;
+  border-radius: 2px;
+  border: none;
+  padding: 5px 10px;
+  width: 100%;
+  color: inherit;
+}
