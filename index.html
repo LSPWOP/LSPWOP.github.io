@@ -11,46 +11,105 @@
   <link rel="stylesheet" href="/css/menu.css">
   <script src="https://www.w3schools.com/lib/w3.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+  <script src="/js/commentSys.js"></script>
+
 </head>
 
 <body onload="w3.includeHTML();">
   <div w3-include-html="nav_n.html" style="z-index:1"></div>
 
   <center id="logo">
-    <img src="/img/logo1.jpg" alt="">
+    <img src="/img/logo1.png" alt="">
   </center>
 
-  <div class="text1">
-    <h1>UNSERE GAMING GROUP:</h1>
-    <h2>Endlich wieder Simulationen</h2>
-    <h4>Kennen wir uns? Wissen sie etwas über uns?Nein! Dann wirds Zeit. Wir sind 2 Jugendliche die Begeistert an Simulationen und das Spielen am PC.<br> Auf dieser Website werden sie viele Infos über unsere Spiele-Uploads und deren News erfahren.<br> Es wird aus
-      einem einfachen Grund keinen Wöchentlichen Upload statt finden, da wir beide zurzeit noch Schüler sind und sehr viel lernen müssen.<br> Trotzdem viel Spaß</h4>
-  </div>
+  <center>
+    <table class="info">
+      <tr>
+        <td colspan="2">
+          <div class="round padded content">
+            <table width="100%">
+              <tr>
+                <td width="50%">
+                  <center>
+                    <h1 class="center">Unser Kanaltrailer:</h1>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/5v0LLIfwWUo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                  </center>
+                </td>
+                <td width="50%">
+                  <center>
+                    <h1 class="center">Unser neustes Video:</h1>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/JF6U5s8EAGU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                  </center>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="round padded content" style="height:250px">
+            <h1>UNSERE GAMING GROUP:</h1>
+            <h2>Endlich wieder Simulationen</h2>
+            <h4>
+              Kennen wir uns? Wissen sie etwas über uns? Nein! Dann wirds Zeit. Wir sind 2 Jugendliche die gerne Simulatoren und PC-Spiele spielen.<br>Auf dieser Website werden sie viele Infos über unsere Spiele-Uploads und deren News erfahren.<br>Es wird aus
+            einem einfachen Grund keinen Wöchentlichen Upload geben, da wir beide zurzeit noch Schüler sind und sehr viel lernen müssen.<br> Trotzdem viel Spaß!</h4>
+          </div>
+        </td>
+        <td>
+          <div class="round padded content" style="height:250px">
+            <table class="ui">
+              <tr>
+                <td><input id="input" type="text" placeholder="Name"></td>
+                <td><input id="button" type="button" onclick="newComment()" value="Absenden"></td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <textarea id="textarea" placeholder="Hier Kommentar schreiben..."></textarea>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="round padded content" style="height:400px">
+            <h1>Neuigkeiten über unsere Simulatoren:</h1>
+            <h2>Folge Uns – auf jeden Pixel</h2>
+            <table border="1" class="dark">
+              <tr>
+                <td>Dirt</td>
+                <td>LS 17</td>
+                <td>ETS 2</td>
+                <td>Spintrires</td>
+              </tr>
+              <tr>
+                <td><img src="/img/game1.jpg" alt=""></td>
+                <td><img src="/img/game2.jpg" alt=""></td>
+                <td><img src="/img/game3.jpg" alt=""></td>
+                <td><img src="/img/game4.jpg" alt=""></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.codemasters.com/game/dirt-4/">Zum Spiel</a> </td>
+                <td><a href="https://www.farming-simulator.com/news.php?lang=de&country=ch">Zum Spiel</a> </td>
+                <td><a href="https://eurotrucksimulator2.de/">Zum Spiel</a> </td>
+                <td><a href="http://www.spintires.com/">Zum Spiel</a> </td>
+              </tr>
+            </table>
+          </div>
+        </td>
+        <td>
+          <div id="comment" class="content round padded" style="height:400px;overflow-y:scroll">
 
-  <div class="text1">
-    <h1>Neuigkeiten über unsere Simulatoren:</h1>
-    <h2>Folge Uns – auf jeden Pixel</h2>
-    <table border="1">
-      <tr>
-        <td>Dirt</td>
-        <td>LS 17</td>
-        <td>ETS 2</td>
-        <td>Spintrires</td>
-      </tr>
-      <tr>
-        <td><img src="/img/game1.jpg" alt=""></td>
-        <td><img src="/img/game2.jpg" alt=""></td>
-        <td><img src="/img/game3.jpg" alt=""></td>
-        <td><img src="/img/game4.jpg" alt=""></td>
-      </tr>
-      <tr>
-        <td><a href="http://www.codemasters.com/game/dirt-4/">Zum Spiel</a> </td>
-        <td><a href="https://www.farming-simulator.com/news.php?lang=de&country=ch">Zum Spiel</a> </td>
-        <td><a href="https://eurotrucksimulator2.de/">Zum Spiel</a> </td>
-        <td><a href="http://www.spintires.com/">Zum Spiel</a> </td>
+          </div>
+        </td>
       </tr>
     </table>
-  </div>
+  </center>
+
+
+
 
   <table class="footer">
     <tr>
@@ -66,6 +125,7 @@
   </table>
 
   <script type="text/javascript" src="/js/counter.js"></script>
+  <script type="text/javascript" src="/js/comment.js"></script>
 </body>
 
 </html>

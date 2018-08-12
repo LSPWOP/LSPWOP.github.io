@@ -12,31 +12,70 @@ html, body {
 }
 
 #logo>img {
-  width: 60%;
+  width: 40%;
   height: auto;
   border-radius: 3px;
 }
 
-.text1 {
-  margin: 20px 0px;
-  margin-left: 50px;
-  border-radius: 3px;
-  padding: 10px;
-  width: 60%;
-  background: #fff
+.info .center {
+  text-align: center;
 }
 
-.text1 table {
+.info iframe {
+  margin: 5px;
+}
+
+.info .content {
+  background: white;
+  margin: 5px;
+}
+
+.info .padded {
+  padding: 10px;
+}
+
+.info .round {
+  border-radius: 3px;
+}
+
+.info .dark {
   border: 1px solid #4286f4;
   background: #222;
   text-align: center;
 }
 
-.text1 img {
+.info img {
   width: 200px;
   height: auto;
   padding: 5px;
   border-radius: 3px;
+}
+
+.info .ui input, textarea {
+  background: white;
+  border: 1px solid gray;
+  padding: 3px;
+}
+
+.comment {
+  background: #222;
+  border-radius: 3px;
+  padding: 5px;
+  margin: 5px 0px;
+}
+
+.comment h6 {
+  margin: 2px;
+}
+
+#button {
+  float: right;
+}
+
+#textarea {
+  width: 300px;
+  height: 190px;
+  resize: none;
 }
 
 .footer {
